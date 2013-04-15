@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Chapter1_Demo1_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <script type="text/javascript" src="/Chapter1/Demo/swfobject.js"></script>
+
+     <div align="center"><h1>My first website!</h1></div>
+    <table border="0" width="100%">
+    <tr valign="top">
+        <td width="50%">
+        <div id="swf_preview_div" style="margin:0px; padding:0px; height:100%;">
+ 
+ 
+	<script type="text/javascript">
+		<!--
+	    var so = new SWFObject("/Chapter1/Demo/Matrix_color.swf", "mymovie", "100%", "100%", "8");
+	    so.addParam("allowScriptAccess", "never");
+	    so.addParam("allowNetworking", "internal");
+	    so.addParam("scale", "showAll");
+	    so.addParam("allowFullScreen", "true");
+	    so.addParam("menu", "false");
+	    so.write("swf_preview_div");
+        //-->
+    </script>
+        
+</div>
+        </td>
+        <td width="*">
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </td>
+    </tr>
+    </table>
+    
+    </form>
+    <hr />
+    <a href="/Chapter1/Demo/before.aspx">[Before Ajax]</a> | <a href="/Chapter1/demo/after.aspx">[After Ajax]</a> | <a href="/Chapter1/Demo/jquery/jquery.aspx">[After Ajax]</a>
+</body>
+</html>
